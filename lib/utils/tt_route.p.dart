@@ -104,6 +104,23 @@ Future<T?> presentRight<T>(BuildContext context, Widget page, {Color? barrierCol
   );
 }
 
+Future<T?> presentLeft<T>(BuildContext context, Widget page, {Color? barrierColor}) {
+  return presentDefault(
+    context,
+    page,
+    barrierColor: barrierColor,
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      final tween = Tween(begin: const Offset(-1, 0), end: Offset.zero).chain(
+        CurveTween(curve: Curves.ease),
+      );
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+
 ///---------------------
 /// POP
 ///---------------------

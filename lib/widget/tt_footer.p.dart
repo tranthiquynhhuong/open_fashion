@@ -16,7 +16,7 @@ class AppFooter extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        _buildSocial(),
+        buildSocial(),
         _buildInfo(),
         _buildMoreNavigate(context),
         _buildCopyright(),
@@ -92,23 +92,27 @@ Widget _buildInfo() {
   );
 }
 
-Widget _buildSocial() {
+Widget buildSocial({
+  Function? onTwitterClick,
+  Function? onInstagramClick,
+  Function? onYoutubeClick,
+}) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
       IconButton(
-        onPressed: () {},
+        onPressed: () => onTwitterClick?.call(),
         icon: Image.asset(Id.twitter),
       ),
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: IconButton(
-          onPressed: () {},
+          onPressed: () => onInstagramClick?.call(),
           icon: Image.asset(Id.instagram),
         ),
       ),
       IconButton(
-        onPressed: () {},
+        onPressed: () => onYoutubeClick?.call(),
         icon: Image.asset(Id.youtube),
       ),
     ],

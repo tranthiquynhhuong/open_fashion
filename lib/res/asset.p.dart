@@ -44,6 +44,7 @@ class Id {
   static const String shopping_bag = 'assets/images/shopping_bag.png';
   static const String star_1 = 'assets/images/Star_1.png';
   static const String tab_indicator = 'assets/images/tab_indicator.png';
+  static const String tab_indicator_big = 'assets/images/tab_indicator_big.png';
   static const String tag = 'assets/images/Tag.png';
   static const String twitter = 'assets/images/Twitter.png';
   static const String up = 'assets/images/Up.png';

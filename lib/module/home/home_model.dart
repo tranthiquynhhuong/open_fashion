@@ -23,4 +23,11 @@ class _HomeModel extends TTChangeNotifier<_HomeView> {
     pageIndex = index;
     notifyListeners();
   }
+
+  void onMenuPressed() {
+    presentLeft(
+      context,
+      createHomeMenu(),
+    );
+  }
 }
