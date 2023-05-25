@@ -19,6 +19,7 @@ export './full_screen_view/full_screen_view_public.dart';
 export './home/home_public.dart';
 export './home_arrival_tab_content/home_arrival_tab_content_public.dart';
 export './home_menu/home_menu_public.dart';
+export './home_menu_tab_content/home_menu_tab_content_public.dart';
 export './product_detail/product_detail_public.dart';
 export './search_recent/search_recent_public.dart';
 export './search_view/search_view_public.dart';

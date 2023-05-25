@@ -6,7 +6,7 @@ class _HomeViewState extends TTState<_HomeModel, _HomeView> {
     double maxW = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: buildHomeAppBar(),
+      appBar: buildHomeAppBar(onMenuPressed: model.onMenuPressed),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: _buildBody(maxW),

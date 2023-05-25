@@ -4,7 +4,6 @@ library home;
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:open_fashion/module/collection/collection_public.dart';
 import 'package:open_fashion/module/module.dart';
 import 'package:open_fashion/res/picture.p.dart';
 import 'package:open_fashion/res/res.dart';
