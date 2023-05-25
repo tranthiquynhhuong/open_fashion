@@ -18,4 +18,10 @@ class _HomeMenuModel extends TTChangeNotifier<_HomeMenuView> {
     }
     notifyListeners();
   }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 }

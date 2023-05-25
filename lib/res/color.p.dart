@@ -20,6 +20,7 @@ class Cl {
   static const border = Color(0xFFDEDEDE);
   static const c4c4c4 = Color(0xFFC4C4C4);
   static const f5f5f5 = Color(0xFFF5F5F5);
+  static const black_111111 = Color(0xFF111111);
 
   static const white = Color(0xFFFFFFFF);
   static const black = Color(0xFF000000);

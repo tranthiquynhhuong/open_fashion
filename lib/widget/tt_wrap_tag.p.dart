@@ -54,13 +54,13 @@ Widget hashTagWrap({List<String>? listChip}) {
   );
 }
 
-Widget hashtagChip(String text) {
+Widget hashtagChip(String text, {EdgeInsetsGeometry? padding}) {
   return Row(
     mainAxisSize: MainAxisSize.min,
     children: [
       Container(
         height: 32,
-        padding: symmetric(horizontal: 14, vertical: 6),
+        padding: padding ?? symmetric(horizontal: 14, vertical: 6),
         decoration: BoxDecoration(
           color: Colors.transparent,
           borderRadius: 20.borderRadius(),

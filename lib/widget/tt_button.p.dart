@@ -1,15 +1,17 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:open_fashion/res/res.dart';
 import 'package:open_fashion/widget/widget.dart';
 
-Widget buildSubmitButton(
+Widget TTSubmitButton(
   String text, {
   double? width,
   bool isBlack = true,
   VoidCallback? onPressed,
   TextStyle? style,
 }) {
-  return buildPrimaryButton(
+  return TTPrimaryButton(
     height: 48,
     width: width,
     fillColor: isBlack ? null : Colors.transparent,
@@ -22,7 +24,7 @@ Widget buildSubmitButton(
   );
 }
 
-Widget buildSubmitIconButton(
+Widget TTSubmitIconButton(
   String text, {
   required Widget icon,
   bool isReverseIcon = false,
@@ -31,7 +33,7 @@ Widget buildSubmitIconButton(
   VoidCallback? onPressed,
   TextStyle? style,
 }) {
-  return buildPrimaryButton(
+  return TTPrimaryButton(
     height: 48,
     fillColor: isBlack ? null : Colors.transparent,
     borderColor: isBlack ? null : Cl.border,
@@ -55,14 +57,14 @@ Widget buildSubmitIconButton(
   );
 }
 
-Widget buildButton(
+Widget TTButton(
   String text, {
   double? width,
   bool isBlack = true,
   VoidCallback? onPressed,
   TextStyle? style,
 }) {
-  return buildPrimaryButton(
+  return TTPrimaryButton(
     height: 40,
     fillColor: isBlack ? null : Colors.transparent,
     borderColor: isBlack ? null : Cl.border,
@@ -77,7 +79,7 @@ Widget buildButton(
   );
 }
 
-Widget buildIconButton(
+Widget TTIconButton(
   String text, {
   required Widget icon,
   bool isReverseIcon = false,
@@ -85,7 +87,7 @@ Widget buildIconButton(
   VoidCallback? onPressed,
   TextStyle? style,
 }) {
-  return buildPrimaryButton(
+  return TTPrimaryButton(
     height: 40,
     fillColor: isBlack ? null : Colors.transparent,
     borderColor: isBlack ? null : Cl.border,
@@ -109,7 +111,7 @@ Widget buildIconButton(
   );
 }
 
-Widget buildBottomButton(
+Widget TTBottomButton(
   String text, {
   Widget? icon,
   bool isReverseIcon = false,
@@ -117,7 +119,7 @@ Widget buildBottomButton(
   VoidCallback? onPressed,
   TextStyle? style,
 }) {
-  return buildPrimaryButton(
+  return TTPrimaryButton(
     width: double.infinity,
     onPressed: onPressed,
     child: icon != null
@@ -142,7 +144,7 @@ Widget buildBottomButton(
   );
 }
 
-Widget buildBottomAddButton(
+Widget TTBottomAddButton(
   String text, {
   bool isReverseIcon = false,
   bool isBlack = true,
@@ -150,7 +152,7 @@ Widget buildBottomAddButton(
   VoidCallback? onFavoritePressed,
   TextStyle? style,
 }) {
-  return buildPrimaryButton(
+  return TTPrimaryButton(
       width: double.infinity,
       onPressed: onAddPressed,
       child: Padding(
@@ -174,7 +176,7 @@ Widget buildBottomAddButton(
       ));
 }
 
-Widget buildPrimaryButton({
+Widget TTPrimaryButton({
   required Widget child,
   double height = 56,
   double? width,

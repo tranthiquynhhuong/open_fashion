@@ -13,15 +13,15 @@ class _WindowViewState extends TTState<_WindowModel, _WindowView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                buildSubmitButton('SUBMIT', width: 132),
+                TTSubmitButton('SUBMIT', width: 132),
                 const SizedBox(height: 16),
-                buildSubmitButton(
+                TTSubmitButton(
                   'BACK TO HOME',
                   isBlack: false,
                   width: 216,
                 ),
                 const SizedBox(height: 16),
-                buildSubmitIconButton(
+                TTSubmitIconButton(
                   'SUBMIT',
                   icon: Image.asset(
                     Id.shopping_bag,
@@ -29,13 +29,13 @@ class _WindowViewState extends TTState<_WindowModel, _WindowView> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                buildSubmitIconButton(
+                TTSubmitIconButton(
                   'SUBMIT',
                   isBlack: false,
                   icon: Image.asset(Id.shopping_bag),
                 ),
                 const SizedBox(height: 16),
-                buildSubmitIconButton(
+                TTSubmitIconButton(
                   'SUBMIT',
                   isReverseIcon: true,
                   icon: Image.asset(
@@ -44,18 +44,18 @@ class _WindowViewState extends TTState<_WindowModel, _WindowView> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                buildSubmitIconButton(
+                TTSubmitIconButton(
                   'SUBMIT',
                   isReverseIcon: true,
                   isBlack: false,
                   icon: Image.asset(Id.shopping_bag),
                 ),
                 const SizedBox(height: 16),
-                buildButton('CHAT WITH US'),
+                TTButton('CHAT WITH US'),
                 const SizedBox(height: 16),
-                buildButton('CHAT WITH US', isBlack: false),
+                TTButton('CHAT WITH US', isBlack: false),
                 const SizedBox(height: 16),
-                buildSubmitIconButton(
+                TTSubmitIconButton(
                   'HOME PAGE',
                   icon: RotatedBox(
                     quarterTurns: 2,
@@ -66,7 +66,7 @@ class _WindowViewState extends TTState<_WindowModel, _WindowView> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                buildSubmitIconButton(
+                TTSubmitIconButton(
                   'HOME PAGE',
                   isBlack: false,
                   icon: RotatedBox(
@@ -77,7 +77,7 @@ class _WindowViewState extends TTState<_WindowModel, _WindowView> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                buildSubmitIconButton(
+                TTSubmitIconButton(
                   'HOME PAGE',
                   isReverseIcon: true,
                   icon: Image.asset(
@@ -86,7 +86,7 @@ class _WindowViewState extends TTState<_WindowModel, _WindowView> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                buildSubmitIconButton(
+                TTSubmitIconButton(
                   'HOME PAGE',
                   isBlack: false,
                   isReverseIcon: true,
@@ -95,9 +95,9 @@ class _WindowViewState extends TTState<_WindowModel, _WindowView> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                buildBottomButton('ADD NOW'),
+                TTBottomButton('ADD NOW'),
                 const SizedBox(height: 16),
-                buildBottomButton(
+                TTBottomButton(
                   'SUBMIT',
                   isReverseIcon: true,
                   icon: Image.asset(
@@ -106,7 +106,7 @@ class _WindowViewState extends TTState<_WindowModel, _WindowView> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                buildBottomButton(
+                TTBottomButton(
                   'CHECKOUT',
                   icon: Image.asset(
                     Id.shopping_bag,
@@ -114,7 +114,7 @@ class _WindowViewState extends TTState<_WindowModel, _WindowView> {
                   ),
                 ),
                 const SizedBox(height: 16),
-                buildBottomAddButton(
+                TTBottomAddButton(
                   'ADD TO BASKET',
                   onAddPressed: () => debugPrint('Add Pressed'),
                   onFavoritePressed: (() => debugPrint('Favorite Pressed')),

@@ -8,6 +8,7 @@ class Id {
   Id._();
 
   static const String backward = 'assets/images/Backward.png';
+  static const String bookmark = 'assets/images/Bookmark.png';
   static const String call = 'assets/images/Call.png';
   static const String close = 'assets/images/Close.png';
   static const String devider = 'assets/images/Devider.png';

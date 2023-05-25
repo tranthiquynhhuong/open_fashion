@@ -30,4 +30,12 @@ class _HomeModel extends TTChangeNotifier<_HomeView> {
       createHomeMenu(),
     );
   }
+
+  @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
+  }
+
+  void onFollowItemPressed() {}
 }

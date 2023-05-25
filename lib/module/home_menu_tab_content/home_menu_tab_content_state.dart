@@ -49,7 +49,7 @@ class _HomeMenuTabContentViewState extends TTState<_HomeMenuTabContentModel, _Ho
             children: List.generate(
               model.catItems.length,
               (index) => ListTile(
-                onTap: model.onCateItemPressed,
+                onTap: () => model.onCateItemPressed,
                 title: TText(
                   model.catItems[index],
                   style: St.body_L_16_regular,

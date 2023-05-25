@@ -6,7 +6,7 @@ class _HomeViewState extends TTState<_HomeModel, _HomeView> {
     double maxW = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: buildHomeAppBar(onMenuPressed: model.onMenuPressed),
+      appBar: MyAppBar(context),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: _buildBody(maxW),
@@ -307,7 +307,7 @@ class _HomeViewState extends TTState<_HomeModel, _HomeView> {
 
   Widget _buildFollowItem() {
     return RawMaterialButton(
-      onPressed: () {},
+      onPressed: model.onFollowItemPressed,
       child: Stack(
         children: [
           Picture.follow_us_sample,
