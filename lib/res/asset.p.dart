@@ -22,6 +22,7 @@ class Id {
   static const String filter = 'assets/images/Filter.png';
   static const String forward = 'assets/images/Forward.png';
   static const String forward_arrow = 'assets/images/Forward_Arrow.png';
+  static const String forward_back = 'assets/images/Forward_Back.png';
   static const String gallery = 'assets/images/Gallery.png';
   static const String grid_view = 'assets/images/grid_view.png';
   static const String happy = 'assets/images/Happy.png';

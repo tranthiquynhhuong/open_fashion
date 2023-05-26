@@ -27,6 +27,6 @@ class _BlogModel extends TTChangeNotifier<_BlogView> {
   }
 
   void onBlogPressed() {
-    debugPrint('onBlogPressed');
+    push(context, createBlogPost());
   }
 }

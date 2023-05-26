@@ -37,3 +37,21 @@ PreferredSizeWidget MyAppBar(BuildContext context) {
     ),
   );
 }
+
+PreferredSizeWidget MyBackAppBar(BuildContext context, {Widget? title}) {
+  return PreferredSize(
+    preferredSize: const Size.fromHeight(50),
+    child: AppBar(
+      bottomOpacity: 0,
+      scrolledUnderElevation: 0,
+      elevation: 0,
+      centerTitle: true,
+      backgroundColor: Cl.white,
+      leading: IconButton(
+        iconSize: 24,
+        onPressed: () => pop(context),
+        icon: Image.asset(Id.backward),
+      ),
+    ),
+  );
+}

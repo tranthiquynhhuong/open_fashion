@@ -3,6 +3,7 @@
 library blog;
 
 import 'package:flutter/material.dart';
+import 'package:open_fashion/module/blog_post/blog_post_public.dart';
 import 'package:open_fashion/res/picture.p.dart';
 import 'package:open_fashion/res/res.dart';
 import 'package:open_fashion/utils/utils.dart';
