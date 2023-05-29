@@ -31,11 +31,16 @@ class _HomeModel extends TTChangeNotifier<_HomeView> {
     );
   }
 
+  void onFollowItemPressed() {}
+
+  void goToCategory() {
+    pop(context);
+    push(context, createCategory());
+  }
+
   @override
   void dispose() {
     pageController.dispose();
     super.dispose();
   }
-
-  void onFollowItemPressed() {}
 }

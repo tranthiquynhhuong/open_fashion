@@ -18,6 +18,7 @@ class Id {
   static const String do_not_wash = 'assets/images/Do_not_wash.png';
   static const String door_to_door_delivery = 'assets/images/Door_to_door_delivery.png';
   static const String down = 'assets/images/Down.png';
+  static const String dropdown = 'assets/images/Dropdown.png';
   static const String export = 'assets/images/Export.png';
   static const String filter = 'assets/images/Filter.png';
   static const String forward = 'assets/images/Forward.png';

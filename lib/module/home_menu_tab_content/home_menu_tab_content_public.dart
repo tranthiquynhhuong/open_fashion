@@ -3,9 +3,9 @@
 library home_menu_tab_content;
 
 import 'package:flutter/material.dart';
+import 'package:open_fashion/module/category/category_public.dart';
 import 'package:open_fashion/res/res.dart';
-import 'package:open_fashion/utils/ui/tt_edge_insets.p.dart';
-import 'package:open_fashion/utils/ui/tt_sized_box.p.dart';
+import 'package:open_fashion/utils/utils.dart';
 import 'package:provider/provider.dart';
 import 'package:open_fashion/widget/widget.dart';
 

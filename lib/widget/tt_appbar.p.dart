@@ -19,7 +19,7 @@ PreferredSizeWidget MyAppBar(BuildContext context) {
       ),
       leading: IconButton(
         iconSize: 24,
-        onPressed: () => push(context, createHomeMenu()),
+        onPressed: () => presentLeft(context, createHomeMenu()),
         icon: Image.asset(Id.menu),
       ),
       actions: [

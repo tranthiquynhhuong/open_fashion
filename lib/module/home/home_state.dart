@@ -223,7 +223,7 @@ class _HomeViewState extends TTState<_HomeModel, _HomeView> {
         ),
         height(14.84),
         RawMaterialButton(
-          onPressed: () {},
+          onPressed: model.goToCategory,
           child: Container(
             padding: all(8),
             height: 48,
