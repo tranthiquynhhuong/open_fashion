@@ -7,7 +7,6 @@ import 'package:open_fashion/module/blog_post/blog_post_public.dart';
 import 'package:open_fashion/res/picture.p.dart';
 import 'package:open_fashion/res/res.dart';
 import 'package:open_fashion/utils/utils.dart';
-import 'package:open_fashion/widget/tt_wrap_tag.p.dart';
 import 'package:provider/provider.dart';
 import 'package:open_fashion/widget/widget.dart';
 

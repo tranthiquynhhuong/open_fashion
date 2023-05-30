@@ -1,41 +1,91 @@
+// ignore_for_file: prefer_const_constructors
+
 part of category;
 
 class _CategoryViewState extends TTState<_CategoryModel, _CategoryView> {
   @override
   Widget buildWithModel(BuildContext context, _CategoryModel model) {
-    return Scaffold(
-      backgroundColor: Cl.white,
-      appBar: MyAppBar(context),
-      body: SafeArea(
-        child: buildBody(),
+    return Material(
+      child: Scaffold(
+        backgroundColor: Cl.white,
+        body: SafeArea(
+          child: _buildBody(),
+        ),
       ),
     );
   }
 
-  Widget buildBody() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        height(17),
-        buildControlMenu(),
-        height(12),
-        buildSelecList(),
-        height(6),
-        Expanded(child: buildCategoryListView()),
-      ],
+  Widget _buildBody() {
+    return NestedScrollView(
+      headerSliverBuilder: (context, innerBoxIsScrolled) {
+        return [
+          buildSliverAppBar(
+            context,
+            expandedHeight: 163,
+            flexibleSpaceChild: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                height(kToolbarHeight + 17),
+                buildControlMenu(),
+                height(12),
+                buildSelecList(),
+                height(6),
+              ],
+            ),
+          ),
+        ];
+      },
+      body: CustomScrollView(
+        scrollBehavior: ScrollBehavior(),
+        slivers: [
+          SliverPadding(
+            padding: symmetric(horizontal: 16),
+            sliver: buildView(),
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                height(57.04),
+                buildPagination(),
+                height(76.78),
+                AppFooter(pageContext: context),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 
-  Widget buildCategoryListView() {
-    return Container(
-      color: Colors.amber.withOpacity(0.5),
+  Widget buildView() {
+    switch (model.viewMode) {
+      case CategoryViewMode.grid:
+        return createCategoryGridView();
+      case CategoryViewMode.list:
+        return createCategoryListView();
+      case CategoryViewMode.full:
+        return createCategoryFullView();
+      default:
+        return createCategoryGridView();
+    }
+  }
+
+  Widget buildPagination() {
+    return SizedBox(
+      height: 32,
+      child: Pagination(
+        numOfPages: 10,
+        selectedPage: model.selectedPage,
+        pagesVisible: 5,
+        onPageChanged: model.setSelectedPage,
+      ),
     );
   }
 
   Widget buildSelecList() {
-    return Padding(
-      padding: symmetric(horizontal: 16),
-      child: selectWrap(
+    return SizedBox(
+      height: 32,
+      child: selectList(
         listSelect: model.lstSelectTmp,
         onCloseClick: model.onSelectItemClose,
       ),
