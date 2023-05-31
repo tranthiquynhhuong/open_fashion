@@ -26,7 +26,7 @@ class TText extends StatelessWidget {
     this.locale,
     this.softWrap,
     this.overflow = TextOverflow.ellipsis,
-    this.maxLines,
+    this.maxLines = 1,
     this.semanticsLabel,
     this.textWidthBasis,
     this.textHeightBehavior,

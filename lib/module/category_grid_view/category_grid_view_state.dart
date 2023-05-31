@@ -29,13 +29,21 @@ class _CategoryGridViewViewState extends TTState<_CategoryGridViewModel, _Catego
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          IconButton(
-                            padding: only(right: 9, bottom: 6),
-                            alignment: Alignment.bottomRight,
-                            onPressed: () => model.onItemFavoriteCLick(index),
-                            icon: Image.asset(
-                              Id.heart,
-                              color: Cl.secondary,
+                          Padding(
+                            padding: only(right: 3),
+                            child: TTRadiusButton(
+                              onTap: () => model.onItemFavoriteCLick(index),
+                              radius: 22,
+                              child: Container(
+                                width: 22,
+                                height: 22,
+                                margin: all(6),
+                                decoration: BoxDecoration(
+                                  borderRadius: 22.borderRadius(),
+                                  color: Colors.transparent,
+                                ),
+                                child: Image.asset(Id.small_heart_unselect),
+                              ),
                             ),
                           ),
                           height(16)
