@@ -3,10 +3,13 @@ part of home_menu;
 class _HomeMenuViewState extends TTState<_HomeMenuModel, _HomeMenuView> {
   @override
   Widget buildWithModel(BuildContext context, _HomeMenuModel model) {
-    return Scaffold(
-      backgroundColor: Cl.white,
-      body: SafeArea(
-        child: _buildBody(),
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: Scaffold(
+        backgroundColor: Cl.white,
+        body: SafeArea(
+          child: _buildBody(),
+        ),
       ),
     );
   }

@@ -2,7 +2,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:open_fashion/res/res.dart';
+import 'package:open_fashion/utils/utils.dart';
 import 'package:open_fashion/widget/widget.dart';
+
+Widget TTRadiusButton({required double radius, required Widget child, Function? onTap}) {
+  return Material(
+    color: Colors.transparent,
+    child: InkWell(
+      onTap: () => onTap?.call(),
+      borderRadius: radius.borderRadius(),
+      child: child,
+    ),
+  );
+}
 
 Widget TTSubmitButton(
   String text, {

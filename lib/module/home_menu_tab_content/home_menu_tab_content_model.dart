@@ -17,5 +17,8 @@ class _HomeMenuTabContentModel extends TTChangeNotifier<_HomeMenuTabContentView>
     notifyListeners();
   }
 
-  void onCateItemPressed() {}
+  void onCateItemPressed() {
+    popToRoot(context);
+    push(context, createCategory());
+  }
 }

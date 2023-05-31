@@ -9,4 +9,6 @@ export './tt_consum.p.dart';
 export './tt_environment.p.dart';
 export './tt_footer.p.dart';
 export './tt_model_mixin.p.dart';
+export './tt_scroll_list.p.dart';
 export './tt_text.p.dart';
+export './tt_wrap_tag.p.dart';

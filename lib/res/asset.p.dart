@@ -18,6 +18,7 @@ class Id {
   static const String do_not_wash = 'assets/images/Do_not_wash.png';
   static const String door_to_door_delivery = 'assets/images/Door_to_door_delivery.png';
   static const String down = 'assets/images/Down.png';
+  static const String dropdown = 'assets/images/Dropdown.png';
   static const String export = 'assets/images/Export.png';
   static const String filter = 'assets/images/Filter.png';
   static const String forward = 'assets/images/Forward.png';
@@ -44,6 +45,8 @@ class Id {
   static const String search = 'assets/images/Search.png';
   static const String shipping = 'assets/images/Shipping.png';
   static const String shopping_bag = 'assets/images/shopping_bag.png';
+  static const String small_heart_selected = 'assets/images/small_heart_selected.png';
+  static const String small_heart_unselect = 'assets/images/small_heart_unselect.png';
   static const String star_1 = 'assets/images/Star_1.png';
   static const String tab_indicator = 'assets/images/tab_indicator.png';
   static const String tab_indicator_big = 'assets/images/tab_indicator_big.png';
