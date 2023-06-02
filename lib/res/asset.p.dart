@@ -43,6 +43,7 @@ class Id {
   static const String refresh = 'assets/images/Refresh.png';
   static const String resize = 'assets/images/Resize.png';
   static const String search = 'assets/images/Search.png';
+  static const String share = 'assets/images/share.png';
   static const String shipping = 'assets/images/Shipping.png';
   static const String shopping_bag = 'assets/images/shopping_bag.png';
   static const String small_heart_selected = 'assets/images/small_heart_selected.png';

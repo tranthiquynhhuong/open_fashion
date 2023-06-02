@@ -5,7 +5,7 @@ class _CategoryListViewModel extends TTChangeNotifier<_CategoryListViewView> {
   final List<String> lstSizeTmp = ['XS', 'S', 'M', 'L', '2XL', '3XL', '4XL', '5XL'];
 
   onProItemPressed(int index) {
-    debugPrint('onProItemPressed');
+    push(context, createProductDetail());
   }
 
   onFavoritePressed(int index) {

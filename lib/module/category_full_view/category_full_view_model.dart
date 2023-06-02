@@ -5,5 +5,7 @@ class _CategoryFullViewModel extends TTChangeNotifier<_CategoryFullViewView> {
 
   onFavoritePressed(int index) {}
 
-  onItemClick(int index) {}
+  onItemClick(int index) {
+    push(context, createProductDetail());
+  }
 }

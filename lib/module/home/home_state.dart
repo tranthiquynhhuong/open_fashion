@@ -31,7 +31,7 @@ class _HomeViewState extends TTState<_HomeModel, _HomeView> {
             height(38),
             _buildTrending(),
             height(22),
-            Picture.open_fashion,
+            Image.asset(Picture.open_fashion),
             height(20),
             _buildFollow(maxW),
             height(20),
@@ -43,103 +43,108 @@ class _HomeViewState extends TTState<_HomeModel, _HomeView> {
   }
 
   Widget _buildJustForYou() {
-    return LayoutBuilder(builder: (context, constraints) {
-      final maxW = constraints.maxWidth;
-      return Column(
-        children: [
-          SizedBox(
-            height: 40,
-            child: Center(
-              child: TText(
-                'JUST FOR YOU',
-                style: St.title_18_regular.copyWith(color: Cl.black),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final maxW = constraints.maxWidth;
+        return Column(
+          children: [
+            SizedBox(
+              height: 40,
+              child: Center(
+                child: TText(
+                  'JUST FOR YOU',
+                  style: St.title_18_regular.copyWith(color: Cl.black),
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-            child: Center(
-              child: Image.asset(Id.devider),
+            SizedBox(
+              height: 10,
+              child: Center(
+                child: Image.asset(Id.devider),
+              ),
             ),
-          ),
-          height(22.31),
-          CarouselSlider(
-            carouselController: model.suggestController,
-            options: CarouselOptions(
-              padEnds: false,
-              onPageChanged: model.onPageChanged,
-              enableInfiniteScroll: false,
-              viewportFraction: 255 / maxW,
-              height: 390,
-              disableCenter: true,
+            height(22.31),
+            CarouselSlider(
+              carouselController: model.suggestController,
+              options: CarouselOptions(
+                padEnds: false,
+                onPageChanged: model.onPageChanged,
+                enableInfiniteScroll: false,
+                viewportFraction: 255 / maxW,
+                height: 390,
+                disableCenter: true,
+              ),
+              items: List.generate(model.maxLengthListSuggest, (index) => suggestItem()),
             ),
-            items: List.generate(model.maxLengthListSuggest, (index) => suggestItem()),
-          ),
-          SizedBox(
-            height: 45.42,
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(
-                  model.maxLengthListSuggest,
-                  (index) => Padding(
-                    padding: symmetric(horizontal: 2.5),
-                    child: model.pageIndex == index
-                        ? Image.asset(Id.indicator_selected_grey)
-                        : Image.asset(Id.indicator_unselected_grey),
+            SizedBox(
+              height: 45.42,
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(
+                    model.maxLengthListSuggest,
+                    (index) => Padding(
+                      padding: symmetric(horizontal: 2.5),
+                      child: model.pageIndex == index
+                          ? Image.asset(Id.indicator_selected_grey)
+                          : Image.asset(Id.indicator_unselected_grey),
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-        ],
-      );
-    });
+          ],
+        );
+      },
+    );
   }
 
   Widget suggestItem() {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        SizedBox(
-          width: 255,
-          height: 312,
-          child: Picture.product_sample_2,
-        ),
-        height(4),
-        SizedBox(
-          width: 255,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 48,
-                child: Center(
+    return GestureDetector(
+      onTap: model.onSuggestItemClick,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(
+            width: 255,
+            height: 312,
+            child: Image.asset(Picture.product_sample_2),
+          ),
+          height(4),
+          SizedBox(
+            width: 255,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 48,
+                  child: Center(
+                    child: TText(
+                      'Cashmere Blend Cropped Jacket SW1WJ285-AM',
+                      style: St.body_S_12_regular.copyWith(color: Cl.body, height: 1.5),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                Center(
                   child: TText(
-                    'Cashmere Blend Cropped Jacket SW1WJ285-AM',
-                    style: St.body_S_12_regular.copyWith(color: Cl.body, height: 1.5),
-                    maxLines: 2,
+                    '\$210',
+                    style: St.body_M_14_regular.copyWith(
+                      color: Cl.secondary,
+                      fontSize: 15,
+                    ),
+                    maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
                   ),
                 ),
-              ),
-              Center(
-                child: TText(
-                  '\$210',
-                  style: St.body_M_14_regular.copyWith(
-                    color: Cl.secondary,
-                    fontSize: 15,
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ],
-          ),
-        )
-      ],
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 
@@ -156,15 +161,15 @@ class _HomeViewState extends TTState<_HomeModel, _HomeView> {
           ),
         ),
         height(16),
-        Picture.collection_sample,
+        Image.asset(Picture.collection_sample),
         height(40),
-        Picture.video_sample,
+        Image.asset(Picture.video_sample),
       ],
     );
   }
 
   Widget _buildBrand() {
-    return Picture.brand;
+    return Image.asset(Picture.brand);
   }
 
   Widget _buildNewArrival() {
@@ -267,7 +272,7 @@ class _HomeViewState extends TTState<_HomeModel, _HomeView> {
 
   Widget _buildBanner() {
     return RawMaterialButton(
-      child: Picture.banner,
+      child: Image.asset(Picture.banner),
       onPressed: () => push(context, createCollection()),
     );
   }
@@ -310,7 +315,7 @@ class _HomeViewState extends TTState<_HomeModel, _HomeView> {
       onPressed: model.onFollowItemPressed,
       child: Stack(
         children: [
-          Picture.follow_us_sample,
+          Image.asset(Picture.follow_us_sample),
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

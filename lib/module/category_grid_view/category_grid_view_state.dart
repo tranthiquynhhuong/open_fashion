@@ -23,7 +23,7 @@ class _CategoryGridViewViewState extends TTState<_CategoryGridViewModel, _Catego
                 Expanded(
                   child: Stack(
                     children: [
-                      Picture.category_sample,
+                      Image.asset(Picture.category_sample),
                       Positioned.fill(
                           child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,

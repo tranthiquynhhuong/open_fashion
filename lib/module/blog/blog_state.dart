@@ -96,7 +96,7 @@ class _BlogViewState extends TTState<_BlogModel, _BlogView> {
             onPressed: () {},
             child: Stack(
               children: [
-                Picture.blog_banner_sample,
+                Image.asset(Picture.blog_banner_sample),
                 Positioned.fill(
                   child: Container(
                     height: 200,

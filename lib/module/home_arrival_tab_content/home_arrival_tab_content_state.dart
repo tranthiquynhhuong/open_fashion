@@ -18,44 +18,47 @@ class _HomeArrivalTabContentViewState
           childAspectRatio: w / 260,
         ),
         itemBuilder: (ctx, ind) {
-          return Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SizedBox(
-                height: 200,
-                child: Picture.product_sample_1,
-              ),
-              height(4),
-              Center(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    TText(
-                      '21WN reversible angora cardigan',
-                      style: St.body_S_12_regular.copyWith(color: Cl.body),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(
-                      height: 24,
-                      child: Center(
-                        child: TText(
-                          '\$210',
-                          style: St.body_M_14_regular.copyWith(
-                            color: Cl.secondary,
-                            fontSize: 15,
+          return GestureDetector(
+            onTap: () => model.onItemClick(ind),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: 200,
+                  child: Image.asset(Picture.product_sample_1),
+                ),
+                height(4),
+                Center(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      TText(
+                        '21WN reversible angora cardigan',
+                        style: St.body_S_12_regular.copyWith(color: Cl.body),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: 24,
+                        child: Center(
+                          child: TText(
+                            '\$210',
+                            style: St.body_M_14_regular.copyWith(
+                              color: Cl.secondary,
+                              fontSize: 15,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.center,
                           ),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.center,
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              )
-            ],
+                    ],
+                  ),
+                )
+              ],
+            ),
           );
         },
       );

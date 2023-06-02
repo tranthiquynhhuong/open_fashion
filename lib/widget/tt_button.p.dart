@@ -5,7 +5,11 @@ import 'package:open_fashion/res/res.dart';
 import 'package:open_fashion/utils/utils.dart';
 import 'package:open_fashion/widget/widget.dart';
 
-Widget TTRadiusButton({required double radius, required Widget child, Function? onTap}) {
+Widget TTRadiusButton({
+  required double radius,
+  required Widget child,
+  Function? onTap,
+}) {
   return Material(
     color: Colors.transparent,
     child: InkWell(

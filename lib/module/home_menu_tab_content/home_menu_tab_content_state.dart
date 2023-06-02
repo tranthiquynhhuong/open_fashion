@@ -31,7 +31,7 @@ class _HomeMenuTabContentViewState extends TTState<_HomeMenuTabContentModel, _Ho
             collapsedIconColor: Colors.pink,
             tilePadding: only(left: 16),
             childrenPadding: only(left: 16),
-            onExpansionChanged: model.onExpansionChanged,
+            onExpansionChanged: (value) => model.onExpansionChanged(index, value),
             title: TText(
               model.categoties[index],
               style: St.body_L_16_regular,
@@ -39,7 +39,7 @@ class _HomeMenuTabContentViewState extends TTState<_HomeMenuTabContentModel, _Ho
             trailing: Padding(
               padding: only(right: 25.42),
               child: Transform.rotate(
-                angle: model.isExpanded ? 3 : 0,
+                angle: model.isExpanded(index) ? 3 : 0,
                 child: Image.asset(
                   Id.down,
                   color: Cl.body.withOpacity(0.5),

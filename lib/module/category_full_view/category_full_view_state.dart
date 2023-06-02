@@ -19,7 +19,7 @@ class _CategoryFullViewViewState extends TTState<_CategoryFullViewModel, _Catego
                       Expanded(
                         child: Stack(
                           children: [
-                            Picture.category_full_sample,
+                            Image.asset(Picture.category_full_sample),
                             Positioned.fill(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.end,

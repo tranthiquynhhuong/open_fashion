@@ -28,3 +28,25 @@ Widget buildSizeItem(
     onTap: () => onSizeItemPressed?.call(),
   );
 }
+
+Widget buildColorItem(
+  Color color, {
+  bool isSelected = false,
+  Function? onColorItemPressed,
+}) {
+  return GestureDetector(
+    child: Container(
+      width: 24,
+      height: 24,
+      padding: all(3),
+      decoration: BoxDecoration(
+        borderRadius: 16.borderRadius(),
+        border: Border.all(color: isSelected ? Cl.border : Colors.transparent),
+      ),
+      child: CircleAvatar(
+        backgroundColor: color,
+      ),
+    ),
+    onTap: () => onColorItemPressed?.call(),
+  );
+}

@@ -47,7 +47,7 @@ Widget buildSliverAppBar(
   );
 }
 
-PreferredSizeWidget MyAppBar(BuildContext context) {
+PreferredSizeWidget MyAppBar(BuildContext context, {Widget? leading}) {
   return PreferredSize(
     preferredSize: const Size.fromHeight(50),
     child: AppBar(
@@ -59,11 +59,12 @@ PreferredSizeWidget MyAppBar(BuildContext context) {
       title: Image.asset(
         Id.logo,
       ),
-      leading: IconButton(
-        iconSize: 24,
-        onPressed: () => presentLeft(context, createHomeMenu()),
-        icon: Image.asset(Id.menu),
-      ),
+      leading: leading ??
+          IconButton(
+            iconSize: 24,
+            onPressed: () => presentLeft(context, createHomeMenu()),
+            icon: Image.asset(Id.menu),
+          ),
       actions: [
         IconButton(
           iconSize: 24,

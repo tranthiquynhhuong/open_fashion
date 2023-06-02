@@ -18,7 +18,7 @@ class _CategoryListViewViewState extends TTState<_CategoryListViewModel, _Catego
                         children: [
                           SizedBox(
                             width: 100,
-                            child: Picture.category_sample,
+                            child: Image.asset(Picture.category_sample),
                           ),
                           width(12),
                           Flexible(

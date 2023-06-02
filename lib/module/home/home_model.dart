@@ -38,6 +38,10 @@ class _HomeModel extends TTChangeNotifier<_HomeView> {
     push(context, createCategory());
   }
 
+  void onSuggestItemClick() {
+    push(context, createProductDetail());
+  }
+
   @override
   void dispose() {
     pageController.dispose();

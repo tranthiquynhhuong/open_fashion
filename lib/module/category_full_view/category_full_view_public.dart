@@ -3,6 +3,7 @@
 library category_full_view;
 
 import 'package:flutter/material.dart';
+import 'package:open_fashion/module/module.dart';
 import 'package:open_fashion/res/picture.p.dart';
 import 'package:open_fashion/res/res.dart';
 import 'package:open_fashion/utils/utils.dart';
